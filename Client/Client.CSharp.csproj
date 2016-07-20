@@ -68,11 +68,62 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Pixelplacement\iTween\iTweenExtensions.cs" />
+    <Compile Include="Assets\Pixelplacement\iTweenPath\iTweenPath.cs" />
     <Compile Include="Assets\Script\GameController.cs" />
     <Compile Include="Assets\Script\InputController.cs" />
     <Compile Include="Assets\Script\RoleController.cs" />
+    <Compile Include="Assets\Script\TennisBallLogic.cs" />
+    <Compile Include="Assets\iTweenExamples\AccurateLob\Scripts\AccurateLob.cs" />
+    <Compile Include="Assets\iTweenExamples\AccurateLob\Scripts\Bomb.cs" />
+    <Compile Include="Assets\iTweenExamples\AnimatingGUITextures\Scripts\PresentationScreen.cs" />
+    <Compile Include="Assets\iTweenExamples\AnimatingGUITextures\Scripts\TitleScreen.cs" />
+    <Compile Include="Assets\iTweenExamples\AnimatingUnityGUI\Scripts\AnimatingUnityGUI.cs" />
+    <Compile Include="Assets\iTweenExamples\CallbacksExample\Scripts\CallbacksExample.cs" />
+    <Compile Include="Assets\iTweenExamples\CameraFadeExample\Scripts\AmbientMovement.cs" />
+    <Compile Include="Assets\iTweenExamples\CameraFadeExample\Scripts\CameraFadeExample.cs" />
+    <Compile Include="Assets\iTweenExamples\Flythrough\Scripts\FlythroughCameraController.cs" />
+    <Compile Include="Assets\iTweenExamples\Flythrough\Scripts\LookPoint.cs" />
+    <Compile Include="Assets\iTweenExamples\Flythrough\Scripts\LookTarget.cs" />
+    <Compile Include="Assets\iTweenExamples\Flythrough\Scripts\MovePoint.cs" />
+    <Compile Include="Assets\iTweenExamples\GridMovement\Scripts\GameBoardCSharp.cs" />
+    <Compile Include="Assets\iTweenExamples\GridMovement\Scripts\GamePieceCSharp.cs" />
+    <Compile Include="Assets\iTweenExamples\MemoryGame\Scripts\BoardControl.cs" />
+    <Compile Include="Assets\iTweenExamples\MemoryGame\Scripts\BoxControl.cs" />
+    <Compile Include="Assets\iTweenExamples\OrbitExample\Scripts\Path.cs" />
+    <Compile Include="Assets\iTweenExamples\OrbitExample\Scripts\Point.cs" />
+    <Compile Include="Assets\iTweenExamples\PathControlledCharacter\Scripts\Controller.cs" />
+    <Compile Include="Assets\iTweenExamples\PathControlledCharacter\Scripts\PathPoint.cs" />
+    <Compile Include="Assets\iTweenExamples\PathExample\Scripts\PathCameraController.cs" />
+    <Compile Include="Assets\iTweenExamples\PathExample\Scripts\PathExample.cs" />
+    <Compile Include="Assets\iTweenExamples\Platforms\Scripts\CameraController.cs" />
+    <Compile Include="Assets\iTweenExamples\Platforms\Scripts\CharController.cs" />
+    <Compile Include="Assets\iTweenExamples\Platforms\Scripts\DeathZone.cs" />
+    <Compile Include="Assets\iTweenExamples\Platforms\Scripts\InfiniteBackground.cs" />
+    <Compile Include="Assets\iTweenExamples\Platforms\Scripts\LightController.cs" />
+    <Compile Include="Assets\iTweenExamples\Platforms\Scripts\Platform.cs" />
+    <Compile Include="Assets\iTweenExamples\PunchAndStab\Scripts\Bolt.cs" />
+    <Compile Include="Assets\iTweenExamples\PunchAndStab\Scripts\Ticker.cs" />
+    <Compile Include="Assets\iTweenExamples\PutOnPathExample\Scripts\Gizmo.cs" />
+    <Compile Include="Assets\iTweenExamples\PutOnPathExample\Scripts\PutOnPathExample.cs" />
+    <Compile Include="Assets\iTweenExamples\RandomPathGeneration\Scripts\CameraFollow.cs" />
+    <Compile Include="Assets\iTweenExamples\RandomPathGeneration\Scripts\PathGenerator.cs" />
+    <Compile Include="Assets\iTweenExamples\RotatingUnityGUI\Scripts\RotatingUnityGUI.cs" />
+    <Compile Include="Assets\iTweenExamples\ScalingButton\Scripts\ScalingButton.cs" />
+    <Compile Include="Assets\iTweenExamples\SlidingMenu\Scripts\SlidingMenu.cs" />
+    <Compile Include="Assets\iTweenExamples\TurretExample\Scripts\Bound.cs" />
+    <Compile Include="Assets\iTweenExamples\TurretExample\Scripts\Crosshair.cs" />
+    <Compile Include="Assets\iTweenExamples\TurretExample\Scripts\Turret.cs" />
+    <Compile Include="Assets\iTweenExamples\UnevenTerrain\Scripts\Puppeteer.cs" />
+    <Compile Include="Assets\iTweenExamples\ValueToExample\Scripts\ValueToExample.cs" />
+    <Compile Include="Assets\iTweenExamples\WaypointUsage\Scripts\Waypoint.cs" />
+    <Compile Include="Assets\iTweenExamples\WaypointUsage\Scripts\WaypointExample.cs" />
+    <Compile Include="Assets\iTweenExamples\WorkingWithPhysics\Scripts\Bat.cs" />
+    <Compile Include="Assets\iTweenExamples\WorkingWithPhysics\Scripts\Brick.cs" />
+    <Compile Include="Assets\iTweenExamples\WorkingWithPhysics\Scripts\SimpleCameraFade.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />

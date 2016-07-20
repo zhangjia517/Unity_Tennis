@@ -61,11 +61,12 @@ public class RoleController : MonoBehaviour
             case PLAYER_HIT.fanshou:
                 anim.CrossFade("fanshou");
                 ChangeToMoveState(anim["fanshou"].clip.length);
+
                 break;
             default:
                 break;
         }
-
+        GameController.thisScript.m_Ball.SetRolePos();
     }
 
     private void ChangeToMoveState(float time)
@@ -75,6 +76,8 @@ public class RoleController : MonoBehaviour
 
     IEnumerator WaitAndChangeToMoveState(float waitTime)
     {
+        yield return new WaitForSeconds(waitTime / 3f);
+        GameController.thisScript.m_Ball.Move();
         yield return new WaitForSeconds(waitTime);
         inputCount = 0;
         anim.CrossFade("daiji");
