@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 
 public enum MOVE_STATE
@@ -58,11 +57,13 @@ public class RoleController : MonoBehaviour
                 anim.CrossFade("zhengshou");
                 ChangeToMoveState(anim["zhengshou"].clip.length);
                 break;
+
             case PLAYER_HIT.fanshou:
                 anim.CrossFade("fanshou");
                 ChangeToMoveState(anim["fanshou"].clip.length);
 
                 break;
+
             default:
                 break;
         }
@@ -74,7 +75,7 @@ public class RoleController : MonoBehaviour
         StartCoroutine(WaitAndChangeToMoveState(time));
     }
 
-    IEnumerator WaitAndChangeToMoveState(float waitTime)
+    private IEnumerator WaitAndChangeToMoveState(float waitTime)
     {
         yield return new WaitForSeconds(waitTime / 3f);
         GameController.thisScript.m_Ball.Move();

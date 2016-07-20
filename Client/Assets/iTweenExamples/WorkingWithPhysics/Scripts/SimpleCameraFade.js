@@ -1,4 +1,5 @@
-function Start (){	
+
+function Start() {
 	//create a Camera Fade filled with a default color of black at a default depth of 999999:
 	iTween.CameraFadeAdd();
 	//fade the camera fade "from" an "amount" of 1 over 1 second (we can use the simple version of iTween here):
@@ -14,5 +15,5 @@ function Update(){
 }
 
 function SwitchScene(){
-	Application.LoadLevel("JS");	
+    SceneManagement.SceneManager.LoadScene("JS");
 }

@@ -1,13 +1,12 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class InputController : MonoBehaviour
 {
-    void Start()
+    private void Start()
     {
     }
 
-    void Update()
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.S))
         {

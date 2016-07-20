@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class SimpleCameraFade : MonoBehaviour{	
 	void Start (){	
@@ -18,6 +19,7 @@ public class SimpleCameraFade : MonoBehaviour{
 	}
 	
 	void SwitchScene(){
-		Application.LoadLevel("C#");	
-	}
+        SceneManager.LoadScene("C#");	
+
+    }
 }
