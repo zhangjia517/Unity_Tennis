@@ -67,7 +67,6 @@ public class RoleController : MonoBehaviour
             default:
                 break;
         }
-        //GameController.thisScript.m_Ball.SetRolePos();
     }
 
     private void ChangeToMoveState(float time)
