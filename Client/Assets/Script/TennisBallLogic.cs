@@ -22,6 +22,6 @@ public class TennisBallLogic : MonoBehaviour
         gameObject.MoveTo(new Vector3[] { new Vector3(RoleController.thisScript.transform.position.x, 0.3f, 0),
                                           new Vector3(RoleController.thisScript.transform.position.x, 0.05f, 0.666f),
                                           new Vector3(RoleController.thisScript.transform.position.x, 0.15f, 1.3f)},
-                                   1f, 0f, EaseType.linear);
+                          1f, 0f, EaseType.linear);
     }
 }

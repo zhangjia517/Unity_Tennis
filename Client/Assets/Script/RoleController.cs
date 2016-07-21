@@ -67,7 +67,7 @@ public class RoleController : MonoBehaviour
             default:
                 break;
         }
-        GameController.thisScript.m_Ball.SetRolePos();
+        //GameController.thisScript.m_Ball.SetRolePos();
     }
 
     private void ChangeToMoveState(float time)
@@ -78,6 +78,7 @@ public class RoleController : MonoBehaviour
     private IEnumerator WaitAndChangeToMoveState(float waitTime)
     {
         yield return new WaitForSeconds(waitTime / 3f);
+        GameController.thisScript.m_Ball.SetRolePos();
         GameController.thisScript.m_Ball.Move();
         yield return new WaitForSeconds(waitTime);
         inputCount = 0;
