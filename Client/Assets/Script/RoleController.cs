@@ -61,7 +61,6 @@ public class RoleController : MonoBehaviour
             case PLAYER_HIT.fanshou:
                 anim.CrossFade("fanshou");
                 ChangeToMoveState(anim["fanshou"].clip.length);
-
                 break;
 
             default:
