@@ -70,11 +70,12 @@
   <ItemGroup>
     <Compile Include="Assets\Pixelplacement\iTween\iTweenExtensions.cs" />
     <Compile Include="Assets\Pixelplacement\iTweenPath\iTweenPath.cs" />
+    <Compile Include="Assets\Script\Behaviour\FanshouBehaviour.cs" />
+    <Compile Include="Assets\Script\Behaviour\ZhengshouBehaviour.cs" />
     <Compile Include="Assets\Script\GameController.cs" />
     <Compile Include="Assets\Script\InputController.cs" />
     <Compile Include="Assets\Script\RoleController.cs" />
     <Compile Include="Assets\Script\TennisBallLogic.cs" />
-    <Compile Include="Assets\SetFalse.cs" />
     <Compile Include="Assets\iTweenExamples\AccurateLob\Scripts\AccurateLob.cs" />
     <Compile Include="Assets\iTweenExamples\AccurateLob\Scripts\Bomb.cs" />
     <Compile Include="Assets\iTweenExamples\AnimatingGUITextures\Scripts\PresentationScreen.cs" />

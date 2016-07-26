@@ -1,21 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public enum MOVE_STATE
-{
-    MoveUp,
-    MoveBack,
-    MoveLeft,
-    MoveRight,
-    Idle,
-}
-
-public enum PLAYER_STATE
-{
-    Move,
-    Hit,
-}
-
 public enum PLAYER_HIT
 {
     zhengshou,
@@ -24,13 +9,10 @@ public enum PLAYER_HIT
 
 public class RoleController : MonoBehaviour
 {
-    public Animator m_Animator = null;
-    public int moveSpeed = 3;
     public static RoleController thisScript;
+    public Animator m_Animator = null;
     public GameObject m_Target = null;
-
-    private Animation anim = null;
-    public int inputCount = 0;
+    public int m_inputCount = 0;
 
     private void Awake()
     {
@@ -39,7 +21,6 @@ public class RoleController : MonoBehaviour
 
     private void Start()
     {
-        anim = this.GetComponent<Animation>();
     }
 
     private void Update()
@@ -49,20 +30,17 @@ public class RoleController : MonoBehaviour
 
     internal void HitBall(PLAYER_HIT hitState)
     {
-        if (inputCount != 0) return;
-        inputCount++;
+        if (m_inputCount != 0) return;
+        m_inputCount++;
 
         switch (hitState)
         {
             case PLAYER_HIT.zhengshou:
-                m_Animator.SetBool("Zhengshou", true);
-                //anim.CrossFade("zhengshou");
-                //ChangeToMoveState(m_Animator.);
+                m_Animator.Play("zhengshou");
                 break;
 
             case PLAYER_HIT.fanshou:
-                anim.CrossFade("fanshou");
-                ChangeToMoveState(anim["fanshou"].clip.length);
+                m_Animator.Play("fanshou");
                 break;
 
             default:
@@ -70,7 +48,7 @@ public class RoleController : MonoBehaviour
         }
     }
 
-    private void ChangeToMoveState(float time)
+    public void ChangeToMoveState(float time)
     {
         StartCoroutine(WaitAndChangeToMoveState(time));
     }
@@ -80,8 +58,5 @@ public class RoleController : MonoBehaviour
         yield return new WaitForSeconds(waitTime / 3f);
         GameController.thisScript.m_Ball.SetRolePos();
         GameController.thisScript.m_Ball.Move();
-        yield return new WaitForSeconds(waitTime);
-        inputCount = 0;
-        anim.CrossFade("daiji");
     }
 }
