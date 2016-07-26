@@ -4,7 +4,7 @@
 
 http://www.fostudio.cn
 
-![image](http://www.fostudio.cn/zhangjia/pic/paipaiDemo.png)
+![image](https://github.com/zhangjia517/Unity_Tennis/blob/master/Client/Assets/Screenshot/paipaiDemo.png)
 
 时间          | 版本
 | :--------:  | :--------------:| 
