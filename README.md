@@ -4,6 +4,8 @@
 
 http://www.fostudio.cn
 
+![image](http://www.fostudio.cn/zhangjia/pic/paipaiDemo.png)
+
 时间          | 版本
 | :--------:  | :--------------:| 
 2016年7月14日 |  初始版本
