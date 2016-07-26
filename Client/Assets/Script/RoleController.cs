@@ -24,12 +24,13 @@ public enum PLAYER_HIT
 
 public class RoleController : MonoBehaviour
 {
+    public Animator m_Animator = null;
     public int moveSpeed = 3;
     public static RoleController thisScript;
     public GameObject m_Target = null;
 
     private Animation anim = null;
-    private int inputCount = 0;
+    public int inputCount = 0;
 
     private void Awake()
     {
@@ -54,8 +55,9 @@ public class RoleController : MonoBehaviour
         switch (hitState)
         {
             case PLAYER_HIT.zhengshou:
-                anim.CrossFade("zhengshou");
-                ChangeToMoveState(anim["zhengshou"].clip.length);
+                m_Animator.SetBool("Zhengshou", true);
+                //anim.CrossFade("zhengshou");
+                //ChangeToMoveState(m_Animator.);
                 break;
 
             case PLAYER_HIT.fanshou:
