@@ -122,6 +122,7 @@
     <Compile Include="Assets\Script\GameController.cs" />
     <Compile Include="Assets\Script\InputController.cs" />
     <Compile Include="Assets\Script\RoleController.cs" />
+    <Compile Include="Assets\Script\Temp\DrawGizmos.cs" />
     <Compile Include="Assets\Script\TennisBallLogic.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -4,18 +4,45 @@ public class ZhengshouBehaviour : StateMachineBehaviour
 {
     private RoleController m_RoleController;
 
+    private bool m_isHit = false;
+
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         m_RoleController = RoleController.thisScript;
 
         m_RoleController.m_curPlayerState = PLAYER_STATE.Hit;
-        m_RoleController.ChangeToMoveState(stateInfo.length);
+        m_isHit = false;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        if (stateInfo.normalizedTime > 0.25f)
+        {
+            if (Input.GetKey(KeyCode.S))
+            {
+                animator.speed = 0.1f;
+            }
+            else
+            {
+                animator.speed = 1f;
+            }
+        }
+        if (stateInfo.normalizedTime > 0.3f)
+        {
+            animator.speed = 1f;
+        }
+
+        if (!m_isHit)
+        {
+            if (stateInfo.normalizedTime > 0.3f)
+            {
+                GameController.thisScript.m_Ball.SetRolePos();
+                GameController.thisScript.m_Ball.Move();
+                m_isHit = true;
+            }
+        }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
