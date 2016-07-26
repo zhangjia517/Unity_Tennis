@@ -1,6 +1,12 @@
 ﻿using System.Collections;
 using UnityEngine;
 
+public enum PLAYER_STATE
+{
+    Move,
+    Hit,
+}
+
 public enum PLAYER_HIT
 {
     zhengshou,
@@ -12,7 +18,10 @@ public class RoleController : MonoBehaviour
     public static RoleController thisScript;
     public Animator m_Animator = null;
     public GameObject m_Target = null;
+    public PLAYER_STATE m_curPlayerState = PLAYER_STATE.Move;
+
     public int m_inputCount = 0;
+
 
     private void Awake()
     {
