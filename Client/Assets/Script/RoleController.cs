@@ -64,7 +64,7 @@ public class RoleController : MonoBehaviour
     private IEnumerator WaitAndChangeToMoveState(float waitTime)
     {
         yield return new WaitForSeconds(waitTime / 3f);
-        GameController.thisScript.m_Ball.SetRolePos();
+        GameController.thisScript.m_Ball.SetPath(0);
         GameController.thisScript.m_Ball.Move();
     }
 }
