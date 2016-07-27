@@ -52,27 +52,26 @@ public class TennisBallLogic : MonoBehaviour
 
     public void SetRolePos()
     {
-        m_trail.enabled = false;
-        m_startPos = new Vector3(m_RoleController.transform.position.x, 0.2f, m_RoleController.transform.position.z);
-        m_endPos = new Vector3(m_RoleController.transform.position.x - 1f, 0.05f, 1.8f);
+        m_trail.Clear();
+        m_startPos = new Vector3(m_RoleController.transform.position.x, 0.25f, m_RoleController.transform.position.z + 0.1f);
+        m_endPos = new Vector3(m_RoleController.transform.position.x - 1f, 0.005f, 1.8f);
         gameObject.transform.position = m_startPos;
 
-        m_p1 = ErYuanYiCiForZeroPoint(m_startPos, m_endPos, 0);
-        m_p2 = ErYuanYiCiForZeroPoint(m_startPos, m_endPos, 1);
-        m_p3 = ErYuanYiCiForZeroPoint(m_startPos, m_endPos, 1.5f);
-        m_p4 = ErYuanYiCiForZeroPoint(m_startPos, m_endPos, 1.7f);
-        m_p5 = ErYuanYiCiForZeroPoint(m_startPos, m_endPos, 1.75f);
+        m_p1 = ErYuanYiCiForZeroPoint(m_startPos, m_endPos, 0, 0.45f);
+        m_p2 = ErYuanYiCiForZeroPoint(m_startPos, m_endPos, 1, 0.005f);
+        m_p3 = ErYuanYiCiForZeroPoint(m_startPos, m_endPos, 1.5f, 0.15f);
+        m_p4 = ErYuanYiCiForZeroPoint(m_startPos, m_endPos, 1.7f, 0.005f);
+        m_p5 = ErYuanYiCiForZeroPoint(m_startPos, m_endPos, 1.75f, 0.07f);
     }
 
     public void Move()
     {
-        m_trail.enabled = true;
         iTween.Stop(gameObject);
-        gameObject.MoveTo(new Vector3[] {new Vector3(m_p1.x, 0.45f, m_p1.z),
-                                         new Vector3(m_p2.x, 0.05f, m_p2.z),
-                                         new Vector3(m_p3.x, 0.15f, m_p3.z),
-                                         new Vector3(m_p4.x, 0.05f, m_p4.z),
-                                         new Vector3(m_p5.x, 0.07f, m_p5.z),
+        gameObject.MoveTo(new Vector3[] {m_p1,
+                                         m_p2,
+                                         m_p3,
+                                         m_p4,
+                                         m_p5,
                                          m_endPos,
                           },
                           2f,
@@ -80,13 +79,13 @@ public class TennisBallLogic : MonoBehaviour
                           EaseType.linear);
     }
 
-    public Vector3 ErYuanYiCiForZeroPoint(Vector3 s, Vector3 e, float zPos)
+    public Vector3 ErYuanYiCiForZeroPoint(Vector3 s, Vector3 e, float zPos, float height)
     {
         float k, b;
         k = (e.x - s.x) / (e.z - s.z);
         b = s.x - (k * s.z);
 
-        Vector3 centPos = new Vector3(zPos * k + b, 0.5f, zPos);
+        Vector3 centPos = new Vector3(zPos * k + b, height, zPos);
         return centPos;
     }
 }

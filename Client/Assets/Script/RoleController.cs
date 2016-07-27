@@ -22,7 +22,6 @@ public class RoleController : MonoBehaviour
 
     public int m_inputCount = 0;
 
-
     private void Awake()
     {
         thisScript = this;

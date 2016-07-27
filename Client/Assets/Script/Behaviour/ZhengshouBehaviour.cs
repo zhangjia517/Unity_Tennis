@@ -36,7 +36,7 @@ public class ZhengshouBehaviour : StateMachineBehaviour
 
         if (!m_isHit)
         {
-            if (stateInfo.normalizedTime > 0.3f)
+            if (stateInfo.normalizedTime > 0.35f)
             {
                 GameController.thisScript.m_Ball.SetRolePos();
                 GameController.thisScript.m_Ball.Move();

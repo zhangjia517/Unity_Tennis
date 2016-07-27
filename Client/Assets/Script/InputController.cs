@@ -46,6 +46,7 @@ public class InputController : MonoBehaviour
                 m_RoleController.gameObject.transform.Translate(Vector3.right * Time.deltaTime * MoveSpeed * 0.75f, Space.World);
             }
         }
+
         #endregion 人物移动
     }
 }
