@@ -50,7 +50,7 @@ public class ZhengshouBehaviour : StateMachineBehaviour
                           "frontCount" + frontCount + " " +
                           "backCount" + backCount + " ");
 
-                float rightOffset = (rightCount - leftCount) / 30;
+                float rightOffset = (rightCount - leftCount) / 30f;
                 
                 GameController.thisScript.m_Ball.SetPath(rightOffset);
                 GameController.thisScript.m_Ball.Move();

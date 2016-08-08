@@ -52,11 +52,12 @@ public class TennisBallLogic : MonoBehaviour
 
     public void SetPath(float rightOffset)
     {
+        Debug.Log(rightOffset);
         m_trail.Clear();
         m_startPos = new Vector3(m_RoleController.transform.position.x, 0.25f, m_RoleController.transform.position.z + 0.1f);
-        float tX = m_RoleController.transform.position.x + rightOffset;
-        if (tX > 1) tX = 1.2f;
-        if (tX < -1) tX = -1.2f;
+        float tX = 0;
+        if (rightOffset > 0) tX = 1.1f;
+        if (rightOffset < 0) tX = -1.1f;
         m_endPos = new Vector3(tX, 0.005f, 1.8f);
         gameObject.transform.position = m_startPos;
 
