@@ -7,7 +7,6 @@ public class GameController : MonoBehaviour
 
     private void Awake()
     {
-		
         thisScript = this;
     }
 
